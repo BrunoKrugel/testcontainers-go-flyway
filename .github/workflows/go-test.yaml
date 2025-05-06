@@ -5,26 +5,33 @@ name: Go Test
 
 on:
   push:
+    branches:
+    - main
+
   pull_request:
-    branches: [ "main" ]
+    branches:
+    - main
 
 jobs:
-
-  build:
+  build_and_test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v3
 
       - name: Set up Go
         uses: actions/setup-go@v4
         with:
-          go-version: '1.21'
-
-      - name: Display Go version
-        run: go version
+          go-version: 'stable'
 
       - name: Install dependencies
-        run: go get .
+        run: |
+          go install github.com/golangci/golangci-lint/cmd/golangci-lint@latest
 
-      - name: Test flyway testcontainer
-        run: make all
+      - name: Lint
+        run: make lint
+
+      - name: Build
+        run: go build ./...
+
+      - name: Test
+        run: go test -v ./...
