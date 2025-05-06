@@ -48,7 +48,7 @@ func TestFlyway_mysql(t *testing.T) {
 
 	// Create a Flyway container and run SQL migration
 	flywayContainer, err := flyway.RunContainer(ctx,
-		testcontainers.WithImage(flyway.BuildFlywayImageVersion()),
+		flyway.BuildFlywayImageVersion(),
 		network.WithNetwork([]string{"flyway"}, nw),
 		flyway.WithDatabaseUrl(dbContainer.getNetworkURL()),
 		flyway.WithUser(mysqlDBUsername),

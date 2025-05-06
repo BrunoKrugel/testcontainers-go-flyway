@@ -43,8 +43,9 @@ type FlywayContainer struct {
 }
 
 // RunContainer creates an instance of the Flyway container type
-func RunContainer(ctx context.Context, opts ...testcontainers.ContainerCustomizer) (*FlywayContainer, error) {
+func RunContainer(ctx context.Context, img string, opts ...testcontainers.ContainerCustomizer) (*FlywayContainer, error) {
 	req := testcontainers.ContainerRequest{
+		Image: img,
 		Env: map[string]string{
 			flywayEnvGroupKey:          "true",
 			flywayEnvTableKey:          defaultTable,

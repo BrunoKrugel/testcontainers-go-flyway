@@ -64,6 +64,7 @@ func TestFlyway_parseInvalidRequest(t *testing.T) {
 			testCase := testCase
 
 			flywayContainer, err := flyway.RunContainer(context.Background(),
+				flyway.BuildFlywayImageVersion(),
 				testCase.opts...,
 			)
 

@@ -9,7 +9,6 @@ import (
 
 	"github.com/CyberOwlTeam/flyway"
 
-	"github.com/testcontainers/testcontainers-go"
 	tcnetwork "github.com/testcontainers/testcontainers-go/network"
 )
 
@@ -26,7 +25,7 @@ func ExampleFlyway_postgres() {
 	}
 
 	flywayContainer, err := flyway.RunContainer(ctx,
-		testcontainers.WithImage(flyway.BuildFlywayImageVersion()),
+		flyway.BuildFlywayImageVersion(),
 		tcnetwork.WithNetwork([]string{"flyway"}, nw),
 		flyway.WithDatabaseUrl(postgresContainer.getNetworkUrl()),
 		flyway.WithUser(defaultPostgresDbUsername),

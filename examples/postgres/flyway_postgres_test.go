@@ -41,7 +41,7 @@ func TestFlyway_postgres(t *testing.T) {
 
 	// when
 	flywayContainer, err := flyway.RunContainer(ctx,
-		testcontainers.WithImage(flyway.BuildFlywayImageVersion()),
+		flyway.BuildFlywayImageVersion(),
 		tcnetwork.WithNetwork([]string{"flyway"}, nw),
 		flyway.WithDatabaseUrl(postgresContainer.getNetworkUrl()),
 		flyway.WithUser(defaultPostgresDbUsername),
