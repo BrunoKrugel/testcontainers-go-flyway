@@ -1,13 +1,11 @@
-module github.com/BrunoKrugel/flyway/examples/mysql
+module github.com/BrunoKrugel/testcontainers-go-flyway/examples/mysql
 
 go 1.24
 
 toolchain go1.24.2
 
-replace github.com/BrunoKrugel/flyway => ../..
-
 require (
-	github.com/BrunoKrugel/flyway v0.1.0
+	github.com/BrunoKrugel/testcontainers-go-flyway v0.1.0
 	github.com/docker/docker v28.1.1+incompatible
 	github.com/docker/go-connections v0.5.0
 	github.com/go-sql-driver/mysql v1.8.1
