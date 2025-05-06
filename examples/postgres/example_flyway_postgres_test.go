@@ -7,13 +7,12 @@ import (
 	"path/filepath"
 	"time"
 
-	"github.com/CyberOwlTeam/flyway"
+	"github.com/BrunoKrugel/flyway"
 
 	tcnetwork "github.com/testcontainers/testcontainers-go/network"
 )
 
 func ExampleFlyway_postgres() {
-	// runFlywayContainer {
 	ctx := context.Background()
 	nw, err := tcnetwork.New(ctx)
 	if err != nil {
@@ -46,7 +45,6 @@ func ExampleFlyway_postgres() {
 			log.Fatalf("failed to terminate container: %s", err) // nolint:gocritic
 		}
 	}()
-	//}
 
 	state, err := flywayContainer.State(ctx)
 	if err != nil {

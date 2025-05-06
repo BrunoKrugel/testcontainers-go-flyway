@@ -8,7 +8,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/CyberOwlTeam/flyway"
+	"github.com/BrunoKrugel/flyway"
 	"github.com/docker/docker/api/types/container"
 	"github.com/docker/go-connections/nat"
 	_ "github.com/go-sql-driver/mysql"
