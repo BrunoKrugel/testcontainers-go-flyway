@@ -5,7 +5,7 @@ go 1.24
 toolchain go1.24.2
 
 require (
-	github.com/BrunoKrugel/testcontainers-go-flyway v0.1.0
+	github.com/BrunoKrugel/testcontainers-go-flyway v1.5.4
 	github.com/docker/docker v28.1.1+incompatible
 	github.com/docker/go-connections v0.5.0
 	github.com/google/uuid v1.6.0

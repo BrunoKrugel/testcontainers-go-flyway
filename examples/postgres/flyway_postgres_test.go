@@ -8,7 +8,6 @@ import (
 	"testing"
 	"time"
 
-	"github.com/BrunoKrugel/testcontainers-go-flyway"
 	flyway "github.com/BrunoKrugel/testcontainers-go-flyway"
 	"github.com/docker/docker/api/types/container"
 	"github.com/docker/go-connections/nat"

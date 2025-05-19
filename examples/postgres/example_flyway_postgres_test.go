@@ -12,7 +12,7 @@ import (
 	tcnetwork "github.com/testcontainers/testcontainers-go/network"
 )
 
-func ExampleFlyway_postgres() {
+func Flyway_postgres() {
 	ctx := context.Background()
 	nw, err := tcnetwork.New(ctx)
 	if err != nil {

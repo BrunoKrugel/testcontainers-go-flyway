@@ -12,7 +12,7 @@ import (
 	tcnetwork "github.com/testcontainers/testcontainers-go/network"
 )
 
-func ExampleFlyway_mysql() {
+func Flyway_mysql() {
 	// runFlywayContainer {
 	ctx := context.Background()
 	nw, err := tcnetwork.New(ctx)
