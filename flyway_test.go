@@ -5,7 +5,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/BrunoKrugel/flyway"
+	flyway "github.com/BrunoKrugel/testcontainers-go-flyway"
 	"github.com/stretchr/testify/require"
 
 	"github.com/testcontainers/testcontainers-go"
