@@ -7,7 +7,7 @@ import (
 	"path/filepath"
 	"time"
 
-	"github.com/BrunoKrugel/flyway"
+	flyway "github.com/BrunoKrugel/testcontainers-go-flyway"
 
 	tcnetwork "github.com/testcontainers/testcontainers-go/network"
 )
