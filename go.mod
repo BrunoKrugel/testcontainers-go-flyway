@@ -1,4 +1,4 @@
-module github.com/BrunoKrugel/testcontainers-go-flyway
+module github.com/BrunoKrugel/flyway
 
 go 1.24
 
