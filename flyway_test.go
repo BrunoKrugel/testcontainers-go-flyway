@@ -1,11 +1,11 @@
-package flyway_test
+package test_container_flyway_test
 
 import (
 	"context"
 	"path/filepath"
 	"testing"
 
-	flyway "github.com/BrunoKrugel/flyway"
+	flyway "github.com/BrunoKrugel/test_container_flyway"
 	"github.com/stretchr/testify/require"
 
 	"github.com/testcontainers/testcontainers-go"

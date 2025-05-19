@@ -1,4 +1,4 @@
-package flyway
+package test_container_flyway
 
 import (
 	"context"
